@@ -13,9 +13,7 @@ class ReminderAdmin(admin.ModelAdmin):
         "exported",
     )
 
-    list_filter = (
-        "exported",
-    )
+    list_filter = ("exported",)
 
     search_fields = (
         "title",
