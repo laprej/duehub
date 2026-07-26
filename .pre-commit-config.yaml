@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace      # Trims trailing whitespace
+      - id: end-of-file-fixer        # Ensures files end with a newline
+      - id: check-yaml               # Validates YAML syntax
+      - id: check-added-large-files  # Prevents big files from being committed (>100MB)
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.5.1
+    hooks:
+      - id: black
+        args: [--line-length=120]
+  - repo: https://github.com/pycqa/isort
+    rev: 6.1.0
+    hooks:
+      - id: isort
