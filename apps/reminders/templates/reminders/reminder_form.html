@@ -1,0 +1,28 @@
+<!-- apps/reminders/templates/reminders/reminder_form.html -->
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Create Reminder</title>
+</head>
+
+<body>
+
+<h1>Create Reminder</h1>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Save
+    </button>
+
+</form>
+
+</body>
+
+</html>

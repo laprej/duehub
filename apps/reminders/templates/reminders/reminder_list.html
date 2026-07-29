@@ -1,0 +1,39 @@
+<!-- apps/reminders/templates/reminders/reminder_list.html -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Due Hub</title>
+</head>
+
+<body>
+
+<h1>Reminders</h1>
+
+<a href="{% url 'reminders:create' %}">
+    Add Reminder
+</a>
+
+{% if reminders %}
+<ul>
+
+{% for reminder in reminders %}
+
+    <li>
+        <strong>{{ reminder.title }}</strong><br>
+        {{ reminder.due_at }}<br>
+        {{ reminder.notes }}
+    </li>
+
+{% endfor %}
+
+</ul>
+
+{% else %}
+
+<p>No reminders yet.</p>
+
+{% endif %}
+
+</body>
+</html>
